@@ -4,6 +4,7 @@ information about his/her TODO list progress"""
 import requests
 import sys
 
+
 def get_employee_todo_progress(employee_id):
     """Get the TODO progress for a specific employee."""
     # Base URL for the JSON placeholder API
@@ -31,7 +32,9 @@ def get_employee_todo_progress(employee_id):
     total_number_of_tasks = len(todos_data)
 
     # Print results
-    print(f"Employee {employee_name} is done with tasks({number_of_done_tasks}/{total_number_of_tasks}):")
+    result_line = (f"Employee {employee_name} is done with "
+                   f"tasks({number_of_done_tasks}/{total_number_of_tasks}):")
+    print(result_line)
     for task in done_tasks:
         print("\t", task["title"])
 
