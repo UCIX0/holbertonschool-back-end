@@ -29,7 +29,7 @@ def export_employee_tasks_to_json(employee_id):
             "task": task["title"],
             "completed": task["completed"],
             "username": username
-        } 
+        }
         for task in todos_data
     ]
 
